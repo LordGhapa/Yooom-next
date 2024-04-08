@@ -39,11 +39,11 @@ export default function Home() {
     return dateString;
   }
 
-  const time = new Date().toLocaleTimeString("en-US", {
+  const time = new Date(new Date().getTime() - 180 * 60000).toLocaleTimeString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
   });
-  
+
   const date = getDate();
   return (
     <section className="flex size-full flex-col gap-10 text-white">
