@@ -1,6 +1,16 @@
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
+import { Metadata } from "next";
 
+
+
+export const metadata: Metadata = {
+  title: "Zoom Clone",
+  description: "app de Chamada de video",
+  icons: {
+    icon: "/icons/logo.svg",
+  },
+};
 export default function HomeLayout({
   children,
 }: {
