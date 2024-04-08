@@ -1,19 +1,22 @@
 import MeetingTypeList from "@/components/MeetingTypeList";
 import React from "react";
 
-function getTime() {
-  const currentTime = new Date();
-  const options: Intl.DateTimeFormatOptions = {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: true,
-  };
 
-  const timeString = new Intl.DateTimeFormat("pt-BR", options).format(
-    currentTime,
-  );
-  return timeString;
-}
+
+export default function Home() {
+  function getTime() {
+    const currentTime = new Date();
+    const options: Intl.DateTimeFormatOptions = {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    };
+
+    const timeString = new Intl.DateTimeFormat("pt-BR", options).format(
+      currentTime,
+    );
+    return timeString;
+  }
 function getDate() {
   const currentDate = new Date();
   const options: Intl.DateTimeFormatOptions = {
@@ -28,7 +31,8 @@ function getDate() {
   return dateString;
 }
 
-export default function Home() {
+
+
   const time = getTime();
   const date = getDate();
   return (
