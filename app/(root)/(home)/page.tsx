@@ -12,11 +12,14 @@ export default function Home() {
       hour12: true,
     };
 
-    const timeString = new Intl.DateTimeFormat("pt-BR", options).format(
+    const timeString = new Intl.DateTimeFormat(undefined, options).format(
       currentTime,
     );
+      console.log(currentTime);
+      console.log(timeString);
     return timeString;
   }
+  
 function getDate() {
   const currentDate = new Date();
   const options: Intl.DateTimeFormatOptions = {
