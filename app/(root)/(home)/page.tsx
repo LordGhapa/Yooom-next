@@ -12,7 +12,7 @@ export default function Home() {
       hour12: true,
     };
 
-    const timeString = new Intl.DateTimeFormat(undefined, options).format(
+    const timeString = new Intl.DateTimeFormat("pt-br", options).format(
       currentTime,
     );
       console.log(currentTime);
@@ -36,7 +36,7 @@ function getDate() {
 
 
 
-  const time = getTime();
+  const time = new Date().toTimeString();
   const date = getDate();
   return (
     <section className="flex size-full flex-col gap-10 text-white">
